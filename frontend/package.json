@@ -12,7 +12,10 @@
     "lintfix": "npm run lint:js -- --fix"
   },
   "dependencies": {
+    "@nuxtjs/apollo": "^4.0.1-rc.5",
     "core-js": "^3.25.3",
+    "graphql": "^15.8.0",
+    "graphql-tag": "^2.12.6",
     "nuxt": "^2.15.8",
     "vue": "^2.7.10",
     "vue-server-renderer": "^2.7.10",
