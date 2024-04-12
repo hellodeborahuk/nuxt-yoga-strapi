@@ -9,8 +9,8 @@ const VNode = StrapiBlocks({ content: props.article?.attributes?.body ?? {} });
 <template>
         <div class="border border-teal-600 rounded-md p-10">
             <h2>{{ article.attributes.title }}</h2>
-            <p> {{ article.attributes.author }}</p>
-            <div><VNode /></div>
+            <p>by {{ article.attributes.author }}</p>
+            <div class="pt-6"><VNode /></div>
         </div>
 </template>
 
