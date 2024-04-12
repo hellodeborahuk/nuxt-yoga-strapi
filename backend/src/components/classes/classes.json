@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_classes_classes",
+  "info": {
+    "displayName": "classes"
+  },
+  "options": {},
+  "attributes": {
+    "class": {
+      "type": "component",
+      "repeatable": true,
+      "component": "class.class"
+    }
+  }
+}

@@ -15,7 +15,8 @@
     "segments": {
       "type": "dynamiczone",
       "components": [
-        "hero.hero"
+        "hero.hero",
+        "classes.classes"
       ]
     },
     "title": {

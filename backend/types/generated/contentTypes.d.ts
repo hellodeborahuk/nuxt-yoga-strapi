@@ -408,7 +408,7 @@ export interface ApiPagePage extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    segments: Attribute.DynamicZone<['hero.hero']>;
+    segments: Attribute.DynamicZone<['hero.hero', 'classes.classes']>;
     title: Attribute.String;
     slug: Attribute.String;
     createdAt: Attribute.DateTime;
