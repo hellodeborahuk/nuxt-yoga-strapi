@@ -1,8 +1,8 @@
 <template>
     <div class="bg-stone-50">
         <header class="flex justify-between lg:grid lg:grid-cols-3 items-center py-6 container">
-            <h1 class="col-span-1 justify-self-center">Debbie Dann Yoga</h1>
-            <nav class="col-span-1 font-medium">
+            <h1 class="col-span-1 justify-self-start">Debbie Dann Yoga</h1>
+            <nav class="col-span-1 font-medium justify-self-center">
                 <div class="hidden lg:flex gap-3">
                     <a v-for="item in navigation" :key="item.name" :href="item.href" class="block rounded-md px-3 py-2 text-base font-semibold leading-7 hover:text-teal-600">{{ item.name }}</a>  
                 </div>

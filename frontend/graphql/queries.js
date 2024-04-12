@@ -16,8 +16,8 @@ query allArticlesQuery {
   }`
 
 export const singleArticleQuery = gql`
-query singleArticleQuery {
-    article(id: 1) {
+query singleArticleQuery($id: ID!) {
+    article(id: $id) {
       data {
         id
         attributes {
@@ -39,12 +39,27 @@ query singleArticleQuery {
           slug
             segments {
             __typename
+              ...on ComponentClassesClasses {
+                class {
+                  description
+                  title
+                  icon {
+                    data {
+                      attributes {
+                        url
+                        alternativeText
+                      }
+                    }
+                  }
+                }
+              }
               ...on ComponentHeroHero {
                 image { 
                   data {
                   attributes {
                     url
                     alternativeText
+                    
                   }
                   }
                 }
@@ -55,5 +70,6 @@ query singleArticleQuery {
         }
       }
     }
-  }`
+  }
+  `
   
