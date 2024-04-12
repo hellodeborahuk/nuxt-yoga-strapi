@@ -4,11 +4,13 @@ export interface ClassClass extends Schema.Component {
   collectionName: 'components_class_classes';
   info: {
     displayName: 'class';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     description: Attribute.Blocks;
     icon: Attribute.Media;
+    backgroundColour: Attribute.Enumeration<['teal', 'pink', 'cream']>;
   };
 }
 

@@ -43,6 +43,7 @@ query singleArticleQuery($id: ID!) {
                 class {
                   description
                   title
+                  backgroundColour
                   icon {
                     data {
                       attributes {
