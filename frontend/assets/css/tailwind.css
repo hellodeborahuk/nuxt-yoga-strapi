@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    h1 {
+        @apply font-bold text-3xl font-serif
+    }
+    .container {
+        @apply max-w-screen-xl mx-auto
+    }
+
+    .button-primary {
+        @apply bg-teal-600 text-white font-medium px-3 py-2 rounded-md hover:bg-white hover:text-teal-600 hover:border-2 hover:border-teal-600 transition duration-300 hover:ease-in
+    }
+}
