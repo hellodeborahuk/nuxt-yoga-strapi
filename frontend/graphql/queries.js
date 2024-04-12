@@ -29,3 +29,31 @@ query singleArticleQuery {
       }
     }
   }`
+
+  export const singlePageQuery = gql`
+  query singlePageQuery {
+    page(id:1) {
+      data {
+        attributes {
+          title
+          slug
+            segments {
+            __typename
+              ...on ComponentHeroHero {
+                image { 
+                  data {
+                  attributes {
+                    url
+                    alternativeText
+                  }
+                  }
+                }
+                price
+                description
+              }
+            }
+        }
+      }
+    }
+  }`
+  

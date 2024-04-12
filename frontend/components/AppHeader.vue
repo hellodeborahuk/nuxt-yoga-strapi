@@ -49,9 +49,9 @@
   import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
   
   const navigation = [
-    { name: 'Home', href: '#' },
+    { name: 'Home', href: '/' },
     { name: 'Blog', href: '#' },
-    { name: 'Poems', href: '#' },
+    { name: 'Poems', href: 'Poems' },
     { name: 'Contact', href: '#' },
   ]
   

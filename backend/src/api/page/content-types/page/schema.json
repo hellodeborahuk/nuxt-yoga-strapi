@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "segments": {
+      "type": "dynamiczone",
+      "components": [
+        "hero.hero"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    }
+  }
+}

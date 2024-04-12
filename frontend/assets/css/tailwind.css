@@ -3,12 +3,15 @@
 @tailwind utilities;
 
 @layer base {
+    body {
+        @apply  text-zinc-700
+    }
 
     h1 {
-        @apply font-bold text-3xl font-serif
+        @apply font-bold text-3xl font-serif text-zinc-700
     }
     h2 {
-        @apply font-bold text-2xl font-serif
+        @apply font-bold text-2xl font-serif text-zinc-700
     }
     .container {
         @apply max-w-screen-xl mx-auto px-6 lg:px-0
