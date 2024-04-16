@@ -24,6 +24,16 @@ export interface ClassesClasses extends Schema.Component {
   };
 }
 
+export interface ContentImageGrid extends Schema.Component {
+  collectionName: 'components_content_image_grids';
+  info: {
+    displayName: 'Image grid';
+  };
+  attributes: {
+    images: Attribute.Media;
+  };
+}
+
 export interface ContentTextAndImageBlock extends Schema.Component {
   collectionName: 'components_content_text_and_image_blocks';
   info: {
@@ -53,6 +63,7 @@ declare module '@strapi/types' {
     export interface Components {
       'class.class': ClassClass;
       'classes.classes': ClassesClasses;
+      'content.image-grid': ContentImageGrid;
       'content.text-and-image-block': ContentTextAndImageBlock;
       'hero.hero': HeroHero;
     }

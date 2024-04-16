@@ -17,7 +17,7 @@
 </script>
 
 <template>
-    <div class="container grid grid-cols-1 md:grid-cols-3 gap-6 border-t border-core-brand-beta pt-8">
+    <div class="container grid grid-cols-1 md:grid-cols-3 gap-6 border-t border-core-brand-beta pt-8 mb-10">
         <p class="col-span-1">Hi, I’m Debbie! I am a proud mum of two girls and live in Andover, Hampshire. I completed my Yoga Alliance Professional accredited RYT 200hrs teacher training with Jill Jones Yoga. Doing yoga and meditation keeps me calm and helps me cope with daily family life.</p>
         <img :src="`http://localhost:1337${logo.url}`" :alt="logo.alternativeText" loading="lazy" class="justify-self-center" />
         <div class="col-span-1 justify-self-center lg:justify-self-end space-y-2">
