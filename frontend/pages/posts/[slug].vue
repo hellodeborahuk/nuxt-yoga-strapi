@@ -11,7 +11,7 @@ const VNode = StrapiBlocks({ content: data.value?.article?.data?.attributes?.bod
 </script>
 
 <template>
-    <div class="container prose lg:prose-xl my-20">
+    <div class="container prose md:prose-xl xl:prose-2xl my-20">
         <h2>{{post.title}}</h2>
         <img :src="`http://localhost:1337${post.featuredImage.data.attributes.url}`" alt="{{ post.featuredImage.data.attributes.alternativeText }}" />
         <VNode />
