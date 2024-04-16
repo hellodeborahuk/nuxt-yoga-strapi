@@ -80,6 +80,16 @@ query singleArticleQuery($id: ID!) {
                   }
                 }
               }
+              ...on ComponentContentImageGrid {
+                images{
+                 data {
+                   attributes {
+                     url
+                     alternativeText
+                   }   
+               }
+               }
+             }
               ...on ComponentHeroHero {
                 image { 
                   data {

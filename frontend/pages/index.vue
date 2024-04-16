@@ -10,6 +10,7 @@ const page = data.value?.page?.data ?? [];
     <Hero v-if="segment.__typename === 'ComponentHeroHero'" :description="segment.description" :image="segment.image" :price="segment.price" />
     <Classes v-if="segment.__typename === 'ComponentClassesClasses'" :classes="segment" />
     <TextImageBlock v-if="segment.__typename === 'ComponentContentTextAndImageBlock'" :copy="segment.copy" :image="segment.image" />
+    <ImageGrid v-if="segment.__typename === 'ComponentContentImageGrid'" :images="segment.images" />
   </div>
   <Newsletter />
 
