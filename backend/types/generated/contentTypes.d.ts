@@ -374,10 +374,11 @@ export interface ApiArticleArticle extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String;
-    body: Attribute.Blocks;
-    author: Attribute.Text;
-    slug: Attribute.UID<'api::article.article', 'title'>;
+    title: Attribute.String & Attribute.Required & Attribute.Unique;
+    body: Attribute.Blocks & Attribute.Required;
+    slug: Attribute.UID<'api::article.article', 'title'> & Attribute.Required;
+    featuredImage: Attribute.Media & Attribute.Required;
+    excerpt: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

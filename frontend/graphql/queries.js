@@ -8,7 +8,15 @@ query allArticlesQuery {
         attributes {
           title
           slug
-          author
+          excerpt
+          featuredImage {
+            data {
+              attributes {
+                url
+                alternativeText
+              }
+            }
+          }
           body
         }
       }
@@ -23,7 +31,14 @@ query singleArticleQuery($id: ID!) {
         attributes {
           title
           slug
-          author
+          featuredImage {
+            data {
+              attributes {
+                url
+                alternativeText
+              }
+            }
+          }
           body
         }
       }

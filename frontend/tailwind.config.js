@@ -3,11 +3,10 @@ export default {
   content: [],
   theme: {
     extend: {
-      colors: {
-        'alpha': '#fcf8f4'
-      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
 

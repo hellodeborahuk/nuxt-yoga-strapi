@@ -11,7 +11,7 @@
         @apply font-bold text-3xl font-serif
     }
     h2 {
-        @apply font-bold text-2xl font-serif
+        @apply font-bold text-2xl lg:text-3xl font-serif
     }
     h3 {
         @apply font-semibold text-xl font-serif
@@ -22,5 +22,9 @@
 
     .button-primary {
         @apply bg-teal-600 text-white text-sm font-medium uppercase px-3 py-2 rounded-md hover:bg-white hover:text-teal-600 hover:border-2 hover:border-teal-600 transition duration-300 hover:ease-in
+    }
+
+    .image-hover {
+        @apply hover:scale-110 transition-all duration-300 ease-in
     }
 }
