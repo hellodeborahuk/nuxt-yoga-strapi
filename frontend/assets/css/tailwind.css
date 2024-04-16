@@ -2,9 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --core-brand-alpha: #20998B; /* green */
+    --core-brand-beta: #E4BABE; /* pink */
+    --core-brand-charlie: #E7D8C9; /* cream */
+    --core-brand-delta: #42454C; /* text */
+    --core-brand-echo: #FCF8F4; /* pale cream */
+}
+
 @layer base {
     body {
-        @apply text-zinc-700 bg-stone-50
+        @apply text-core-brand-delta bg-core-brand-echo
     }
 
     h1 {
@@ -21,7 +29,7 @@
     }
 
     .button-primary {
-        @apply bg-teal-600 text-white text-sm font-medium uppercase px-3 py-2 rounded-md hover:bg-white hover:text-teal-600 hover:border-2 hover:border-teal-600 transition duration-300 hover:ease-in
+        @apply bg-core-brand-alpha text-white text-sm font-medium uppercase px-3 py-2 rounded-md hover:bg-white hover:text-core-brand-alpha hover:border-2 hover:border-core-brand-alpha transition duration-300 hover:ease-in
     }
 
     .image-hover {

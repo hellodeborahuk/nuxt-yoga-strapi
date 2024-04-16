@@ -835,7 +835,9 @@ export interface ApiPagePage extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    segments: Attribute.DynamicZone<['hero.hero', 'classes.classes']>;
+    segments: Attribute.DynamicZone<
+      ['hero.hero', 'classes.classes', 'content.text-and-image-block']
+    >;
     title: Attribute.String;
     slug: Attribute.String;
     createdAt: Attribute.DateTime;

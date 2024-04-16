@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_content_text_and_image_blocks",
+  "info": {
+    "displayName": "Text and Image Block",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "copy": {
+      "type": "blocks"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

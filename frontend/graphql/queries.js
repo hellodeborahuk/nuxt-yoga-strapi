@@ -69,13 +69,23 @@ query singleArticleQuery($id: ID!) {
                   }
                 }
               }
+              ...on ComponentContentTextAndImageBlock {
+                copy
+                image {
+                  data {
+                    attributes {
+                      url
+                      alternativeText
+                    }
+                  }
+                }
+              }
               ...on ComponentHeroHero {
                 image { 
                   data {
                   attributes {
                     url
                     alternativeText
-                    
                   }
                   }
                 }

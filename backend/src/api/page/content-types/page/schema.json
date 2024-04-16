@@ -16,7 +16,8 @@
       "type": "dynamiczone",
       "components": [
         "hero.hero",
-        "classes.classes"
+        "classes.classes",
+        "content.text-and-image-block"
       ]
     },
     "title": {

@@ -24,6 +24,18 @@ export interface ClassesClasses extends Schema.Component {
   };
 }
 
+export interface ContentTextAndImageBlock extends Schema.Component {
+  collectionName: 'components_content_text_and_image_blocks';
+  info: {
+    displayName: 'Text and Image Block';
+    description: '';
+  };
+  attributes: {
+    copy: Attribute.Blocks;
+    image: Attribute.Media;
+  };
+}
+
 export interface HeroHero extends Schema.Component {
   collectionName: 'components_hero_heroes';
   info: {
@@ -41,6 +53,7 @@ declare module '@strapi/types' {
     export interface Components {
       'class.class': ClassClass;
       'classes.classes': ClassesClasses;
+      'content.text-and-image-block': ContentTextAndImageBlock;
       'hero.hero': HeroHero;
     }
   }
