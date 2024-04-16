@@ -88,4 +88,20 @@ query singleArticleQuery($id: ID!) {
     }
   }
   `
-  
+  export const siteSettingsQuery = gql`
+  query {
+    siteSetting {
+      data {
+        attributes {
+          logo {
+            data {
+              attributes {
+                url
+                alternativeText
+              }
+            }
+          }
+        }
+      }
+    }
+  }`
