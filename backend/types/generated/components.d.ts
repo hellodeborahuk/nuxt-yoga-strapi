@@ -34,6 +34,20 @@ export interface ContentImageGrid extends Schema.Component {
   };
 }
 
+export interface ContentNewsletter extends Schema.Component {
+  collectionName: 'components_content_newsletters';
+  info: {
+    displayName: 'Newsletter';
+  };
+  attributes: {
+    heading: Attribute.String;
+    copy: Attribute.Blocks;
+    buttonText: Attribute.String;
+    placeholderInput1: Attribute.String;
+    placeholderInput2: Attribute.String;
+  };
+}
+
 export interface ContentTextAndImageBlock extends Schema.Component {
   collectionName: 'components_content_text_and_image_blocks';
   info: {
@@ -64,6 +78,7 @@ declare module '@strapi/types' {
       'class.class': ClassClass;
       'classes.classes': ClassesClasses;
       'content.image-grid': ContentImageGrid;
+      'content.newsletter': ContentNewsletter;
       'content.text-and-image-block': ContentTextAndImageBlock;
       'hero.hero': HeroHero;
     }
