@@ -46,8 +46,8 @@ query singleArticleQuery($id: ID!) {
   }`
 
   export const singlePageQuery = gql`
-  query singlePageQuery {
-    page(id:1) {
+  query singlePageQuery($slug:String) {
+    pages(filters:{slug:{eq:$slug}}) {
       data {
         attributes {
           title
@@ -90,13 +90,13 @@ query singleArticleQuery($id: ID!) {
                }
                }
              }
-             ...on ComponentContentNewsletter {
-                  heading
-                  copy
-                  placeholderInput1
-                  placeholderInput2
-                  buttonText
-              }
+             ... on ComponentContentNewsletter  {
+                heading
+                copy
+                placeholderInput1
+                placeholderInput2
+                buttonText
+             }
               ...on ComponentHeroHero {
                 image { 
                   data {
@@ -108,6 +108,14 @@ query singleArticleQuery($id: ID!) {
                 }
                 price
                 description
+              }
+            ...on ComponentContactContactForm{
+                heading
+                copy
+                labelValue1
+                labelValue2
+                labelValue3
+                buttonText
               }
             }
         }

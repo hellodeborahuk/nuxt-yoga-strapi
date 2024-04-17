@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_contact_contact_forms",
+  "info": {
+    "displayName": "Contact Form"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "copy": {
+      "type": "blocks"
+    },
+    "labelValue1": {
+      "type": "string"
+    },
+    "labelValue2": {
+      "type": "string"
+    },
+    "labelValue3": {
+      "type": "string"
+    },
+    "buttonText": {
+      "type": "string"
+    }
+  }
+}

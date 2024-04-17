@@ -841,7 +841,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'classes.classes',
         'content.text-and-image-block',
         'content.image-grid',
-        'content.newsletter'
+        'content.newsletter',
+        'contact.contact-form'
       ]
     >;
     title: Attribute.String;

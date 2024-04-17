@@ -7,7 +7,7 @@
     const navigation = [
         { name: 'Home', href: '/' },
         { name: 'Blog', href: 'Posts' },
-        { name: 'Contact', href: '#contact' },
+        { name: 'Contact', href: 'Contact' },
     ]
 
     const socialIcons = [

@@ -24,6 +24,21 @@ export interface ClassesClasses extends Schema.Component {
   };
 }
 
+export interface ContactContactForm extends Schema.Component {
+  collectionName: 'components_contact_contact_forms';
+  info: {
+    displayName: 'Contact Form';
+  };
+  attributes: {
+    heading: Attribute.String;
+    copy: Attribute.Blocks;
+    labelValue1: Attribute.String;
+    labelValue2: Attribute.String;
+    labelValue3: Attribute.String;
+    buttonText: Attribute.String;
+  };
+}
+
 export interface ContentImageGrid extends Schema.Component {
   collectionName: 'components_content_image_grids';
   info: {
@@ -88,6 +103,7 @@ declare module '@strapi/types' {
     export interface Components {
       'class.class': ClassClass;
       'classes.classes': ClassesClasses;
+      'contact.contact-form': ContactContactForm;
       'content.image-grid': ContentImageGrid;
       'content.newsletter': ContentNewsletter;
       'content.text-and-image-block': ContentTextAndImageBlock;
