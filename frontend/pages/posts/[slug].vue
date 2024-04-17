@@ -4,7 +4,6 @@ import { StrapiBlocks, type BlocksContent } from 'vue-strapi-blocks-renderer';
 
 const route = useRoute();
 const {data} = await useAsyncQuery(singleArticleQuery, {id: route.query.id});
-console.log(data)
 const post = data.value.article.data.attributes
 
 const VNode = StrapiBlocks({ content: data.value?.article?.data?.attributes?.body ?? {} });

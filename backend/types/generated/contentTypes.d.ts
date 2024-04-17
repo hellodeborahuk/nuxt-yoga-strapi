@@ -840,7 +840,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'hero.hero',
         'classes.classes',
         'content.text-and-image-block',
-        'content.image-grid'
+        'content.image-grid',
+        'content.newsletter'
       ]
     >;
     title: Attribute.String;
@@ -861,12 +862,14 @@ export interface ApiSiteSettingSiteSetting extends Schema.SingleType {
     singularName: 'site-setting';
     pluralName: 'site-settings';
     displayName: 'Site settings';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     logo: Attribute.Media & Attribute.Required;
+    colourTheme: Attribute.Component<'css.css-variable', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

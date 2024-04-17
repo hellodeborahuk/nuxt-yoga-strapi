@@ -90,6 +90,13 @@ query singleArticleQuery($id: ID!) {
                }
                }
              }
+             ...on ComponentContentNewsletter {
+                  heading
+                  copy
+                  placeholderInput1
+                  placeholderInput2
+                  buttonText
+              }
               ...on ComponentHeroHero {
                 image { 
                   data {
@@ -113,6 +120,10 @@ query singleArticleQuery($id: ID!) {
     siteSetting {
       data {
         attributes {
+          colourTheme {
+            variableName
+            variableValue
+          }
           logo {
             data {
               attributes {

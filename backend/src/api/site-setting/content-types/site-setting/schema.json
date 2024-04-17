@@ -4,7 +4,8 @@
   "info": {
     "singularName": "site-setting",
     "pluralName": "site-settings",
-    "displayName": "Site settings"
+    "displayName": "Site settings",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,15 +13,20 @@
   "pluginOptions": {},
   "attributes": {
     "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
+    },
+    "colourTheme": {
+      "type": "component",
+      "repeatable": true,
+      "component": "css.css-variable"
     }
   }
 }
