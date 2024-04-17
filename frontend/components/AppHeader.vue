@@ -5,8 +5,8 @@
   
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'Blog', href: 'posts' },
-    { name: 'Contact', href: 'contact' },
+    { name: 'Blog', href: '/posts' },
+    { name: 'Contact', href: '/contact' },
   ]
   
   const mobileMenuOpen = ref(false)
