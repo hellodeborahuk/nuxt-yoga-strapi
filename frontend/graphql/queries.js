@@ -90,6 +90,13 @@ query singleArticleQuery($id: ID!) {
                }
                }
              }
+             ... on ComponentContentNewsletter  {
+                heading
+                copy
+                placeholderInput1
+                placeholderInput2
+                buttonText
+             }
               ...on ComponentHeroHero {
                 image { 
                   data {
@@ -137,28 +144,3 @@ query singleArticleQuery($id: ID!) {
       }
     }
   }`
-
-  export const contactPageQuery = gql`
-  query contactPageQuery {
-    page(id:2) {
-      data {
-        attributes {
-          title
-          slug
-            segments {
-            __typename
-              ...on ComponentContactContactForm
-              {
-                heading
-                copy
-                labelValue1
-                labelValue2
-                labelValue3
-                buttonText
-              }
-    
-        }
-      }
-    }
-    }
-    }`
