@@ -120,6 +120,10 @@ query singleArticleQuery($id: ID!) {
     siteSetting {
       data {
         attributes {
+          colourTheme {
+            variableName
+            variableValue
+          }
           logo {
             data {
               attributes {
