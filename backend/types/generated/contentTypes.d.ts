@@ -840,7 +840,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'hero.hero',
         'classes.classes',
         'content.text-and-image-block',
-        'content.image-grid'
+        'content.image-grid',
+        'content.newsletter'
       ]
     >;
     title: Attribute.String;

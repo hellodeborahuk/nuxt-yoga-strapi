@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_content_newsletters",
+  "info": {
+    "displayName": "Newsletter"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "copy": {
+      "type": "blocks"
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "placeholderInput1": {
+      "type": "string"
+    },
+    "placeholderInput2": {
+      "type": "string"
+    }
+  }
+}
