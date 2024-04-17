@@ -1,3 +1,17 @@
+<script setup>
+  import { ref } from 'vue'
+  import { Dialog, DialogPanel } from '@headlessui/vue'
+  import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
+  
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'Blog', href: 'Posts' },
+    { name: 'Contact', href: 'Contact' },
+  ]
+  
+  const mobileMenuOpen = ref(false)
+</script>
+
 <template>
     <header class="flex justify-between lg:grid lg:grid-cols-3 items-center py-6 container">
         <h1 class="col-span-1 justify-self-start">Debbie Dann Yoga</h1>
@@ -39,18 +53,3 @@
         </Dialog>
     </header>
 </template>
-
-
-<script setup>
-  import { ref } from 'vue'
-  import { Dialog, DialogPanel } from '@headlessui/vue'
-  import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
-  
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Blog', href: 'Posts' },
-    { name: 'Contact', href: '#contact' },
-  ]
-  
-  const mobileMenuOpen = ref(false)
-</script>
