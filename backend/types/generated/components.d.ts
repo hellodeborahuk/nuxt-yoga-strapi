@@ -60,6 +60,17 @@ export interface ContentTextAndImageBlock extends Schema.Component {
   };
 }
 
+export interface CssCssVariable extends Schema.Component {
+  collectionName: 'components_css_css_variables';
+  info: {
+    displayName: 'CSS Variable';
+  };
+  attributes: {
+    variableName: Attribute.String;
+    variableValue: Attribute.String;
+  };
+}
+
 export interface HeroHero extends Schema.Component {
   collectionName: 'components_hero_heroes';
   info: {
@@ -80,6 +91,7 @@ declare module '@strapi/types' {
       'content.image-grid': ContentImageGrid;
       'content.newsletter': ContentNewsletter;
       'content.text-and-image-block': ContentTextAndImageBlock;
+      'css.css-variable': CssCssVariable;
       'hero.hero': HeroHero;
     }
   }

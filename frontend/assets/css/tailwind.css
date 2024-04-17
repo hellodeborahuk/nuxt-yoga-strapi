@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --core-brand-alpha: #20998B; /* green */
-    --core-brand-beta: #E4BABE; /* pink */
-    --core-brand-charlie: #E7D8C9; /* cream */
-    --core-brand-delta: #42454C; /* text */
-    --core-brand-echo: #FCF8F4; /* pale cream */
-}
 
 @layer base {
     body {

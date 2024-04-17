@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_css_css_variables",
+  "info": {
+    "displayName": "CSS Variable"
+  },
+  "options": {},
+  "attributes": {
+    "variableName": {
+      "type": "string"
+    },
+    "variableValue": {
+      "type": "string"
+    }
+  }
+}
