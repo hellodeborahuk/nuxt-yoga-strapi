@@ -841,12 +841,12 @@ export interface ApiCommentComment extends Schema.CollectionType {
   };
   attributes: {
     name: Attribute.Text;
-    message: Attribute.Blocks;
     article: Attribute.Relation<
       'api::comment.comment',
       'manyToOne',
       'api::article.article'
     >;
+    message: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

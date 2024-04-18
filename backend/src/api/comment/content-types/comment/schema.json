@@ -15,14 +15,14 @@
     "name": {
       "type": "text"
     },
-    "message": {
-      "type": "blocks"
-    },
     "article": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::article.article",
       "inversedBy": "comments"
+    },
+    "message": {
+      "type": "text"
     }
   }
 }
