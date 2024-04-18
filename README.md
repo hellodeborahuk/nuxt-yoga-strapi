@@ -23,4 +23,6 @@ Debbie Dann @debbie_digital on Twitter
 
 ![blog listing](https://github.com/hellodeborahuk/nuxt-yoga-strapi/assets/29425781/92387b9e-a228-4a9c-a6ac-2b69cf591388)
 
+![comments](https://github.com/hellodeborahuk/nuxt-yoga-strapi/assets/29425781/cd0113b0-3a31-433c-b33e-a343299b50f5)
+
 ![strapi](https://github.com/hellodeborahuk/nuxt-yoga-strapi/assets/29425781/799c8d11-c1fc-464b-ac0e-b1e48972c33f)
