@@ -4,7 +4,7 @@
 
 ## About the project
 
-I've recreated my yoga website that I had previously created in WordPress and Next.js. I wanted a project that would allow me to learn Vue/Nuxt and Strapi.
+I've recreated my yoga website that I had previously created in WordPress and Next.js. I wanted a project that would allow me to learn Vue/Nuxt and Strapi. This gets data from Strapi but also posts to it with blog comments (see gif below).
 
 ## Technologies used
 
