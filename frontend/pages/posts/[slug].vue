@@ -1,22 +1,26 @@
 <script lang="ts" setup>
 import {singleArticleQuery} from '../../graphql/queries';
 import { StrapiBlocks, type BlocksContent } from 'vue-strapi-blocks-renderer';
-import {ref} from 'vue'
 
 const route = useRoute();
 const {data} = await useAsyncQuery(singleArticleQuery, {id: route.query.id});
 const post = data.value.article.data.attributes
-
 const VNode = StrapiBlocks({ content: data.value?.article?.data?.attributes?.body ?? {} });
 
-const formData = ref({
-    name: '',
-    message: '',
-})
+import type { Comment } from "~types"
+const { create } = useStrapi()
+const name = ref("")
+const message = ref("")
 
-const submitForm = () => {
-    console.log('hello world')
-    // reset name and message fields
+// http://localhost:3000/posts/the-benefits-of-pranayama?name=Debbie&message=ds
+
+const createComment = async () => {
+    console.log('this worked')
+    await create<Comment>("comments", {
+        name: name.value,
+        message: message.value
+    })
+    console.log(name, message)
 }
 </script>
 
@@ -27,7 +31,7 @@ const submitForm = () => {
         <VNode />
         <div>
             <h4>Leave a comment</h4>
-            <form @submit.prevent="submitForm" class="space-y-6 lg:w-2/3">
+            <form class="space-y-6 lg:w-2/3">
                 <div>
                     <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Name</label>
                 <div class="mt-2">
@@ -40,12 +44,12 @@ const submitForm = () => {
                     <textarea name="message" id="message" autocomplete="message" class="appearance-none block w-full bg-white rounded-md py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-core-brand-alpha"></textarea>
                 </div>
                 </div>
-                <button type="submit" class="button-primary">submit</button>
+                <button @click="createComment();$router.go(-1)" type="submit" class="button-primary">submit</button>
             </form>
         </div>
         <div>
-            <h4>Comments - if comments then display</h4>
-            <div v-for="comment in comments"></div>
+            <h4>Comments - v-if comments then display</h4>
+            <!-- <div v-for="comment in comments"></div> -->
         </div>
     </div>
 

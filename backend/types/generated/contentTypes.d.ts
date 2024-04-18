@@ -841,7 +841,7 @@ export interface ApiCommentComment extends Schema.CollectionType {
   };
   attributes: {
     name: Attribute.Text;
-    comment: Attribute.Blocks;
+    message: Attribute.Blocks;
     article: Attribute.Relation<
       'api::comment.comment',
       'manyToOne',

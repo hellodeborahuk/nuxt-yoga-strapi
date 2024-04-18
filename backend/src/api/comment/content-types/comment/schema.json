@@ -15,7 +15,7 @@
     "name": {
       "type": "text"
     },
-    "comment": {
+    "message": {
       "type": "blocks"
     },
     "article": {
