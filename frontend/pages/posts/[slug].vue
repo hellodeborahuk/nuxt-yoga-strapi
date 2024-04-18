@@ -3,14 +3,21 @@ import {singleArticleQuery} from '../../graphql/queries';
 import { StrapiBlocks, type BlocksContent } from 'vue-strapi-blocks-renderer';
 
 const route = useRoute();
-const {data, refresh} = await useAsyncQuery(singleArticleQuery, {id: route.query.id});
-const post = data.value.article.data.attributes
+const {data} = await useAsyncQuery(singleArticleQuery, {id: route.query.id});
+const post = data.value.article.data.attributes;
+
 const VNode = StrapiBlocks({ content: data.value?.article?.data?.attributes?.body ?? {} });
 
 import type { Comment } from "~/types/comments";
-const { create } = useStrapi()
+const { create } = useStrapi();
+
 const name = ref("")
 const message = ref("")
+const posted = ref<Array<any>>([]);
+const comments = computed(() => {
+    const comments = post.comments?.data ?? [];
+    return [...comments, ...posted.value];
+});
 
 const createComment = async () => {
     await create<Comment>("comments", {
@@ -18,11 +25,15 @@ const createComment = async () => {
         message: message.value,
         article: data.value.article.data.id,
     })
-    await refresh()
+    
+    posted.value.push({attributes: {
+        message: message.value,
+        name: name.value,
+    }});
+
     name.value = ''
     message.value = ''
 }
-const comments = post.comments.data
 
 </script>
 
