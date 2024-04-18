@@ -40,6 +40,14 @@ query singleArticleQuery($id: ID!) {
             }
           }
           body
+          comments {
+            data {
+              attributes {
+                name
+                message
+              }
+            }
+          }
         }
       }
     }

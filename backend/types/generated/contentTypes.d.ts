@@ -805,6 +805,11 @@ export interface ApiArticleArticle extends Schema.CollectionType {
     slug: Attribute.UID<'api::article.article', 'title'> & Attribute.Required;
     featuredImage: Attribute.Media & Attribute.Required;
     excerpt: Attribute.Text;
+    comments: Attribute.Relation<
+      'api::article.article',
+      'oneToMany',
+      'api::comment.comment'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -816,6 +821,43 @@ export interface ApiArticleArticle extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::article.article',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCommentComment extends Schema.CollectionType {
+  collectionName: 'comments';
+  info: {
+    singularName: 'comment';
+    pluralName: 'comments';
+    displayName: 'Comment';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.Text;
+    article: Attribute.Relation<
+      'api::comment.comment',
+      'manyToOne',
+      'api::article.article'
+    >;
+    message: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::comment.comment',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::comment.comment',
       'oneToOne',
       'admin::user'
     > &
@@ -908,6 +950,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::article.article': ApiArticleArticle;
+      'api::comment.comment': ApiCommentComment;
       'api::page.page': ApiPagePage;
       'api::site-setting.site-setting': ApiSiteSettingSiteSetting;
     }

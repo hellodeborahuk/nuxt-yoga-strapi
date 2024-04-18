@@ -39,6 +39,12 @@
     },
     "excerpt": {
       "type": "text"
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "article"
     }
   }
 }
