@@ -60,7 +60,7 @@ const createComment = async () => {
                 <button type="submit" class="button-primary">submit</button>
             </form>
         </div>
-        <div v-if="post.comments.data.length > 0" class="space-y-6 mt-10">
+        <div v-if="comments.length > 0" class="space-y-6 mt-10">
             <h4>Comments</h4>
             <div v-for="comment in comments" class="border border-core-brand-beta p-6 rounded-md not-prose text-lg">
                 <p><span class="font-medium">Name:</span> {{ comment.attributes.name }}</p>
