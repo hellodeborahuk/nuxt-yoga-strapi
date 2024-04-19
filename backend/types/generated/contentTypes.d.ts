@@ -877,6 +877,7 @@ export interface ApiClassClass extends Schema.CollectionType {
       'oneToMany',
       'api::booking.booking'
     >;
+    description: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

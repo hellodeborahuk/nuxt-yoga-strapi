@@ -173,6 +173,7 @@ query singleArticleQuery($id: ID!) {
                 data {
                   attributes {
                     title
+                    description
                   }
                 }
               }

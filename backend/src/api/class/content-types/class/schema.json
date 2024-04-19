@@ -19,6 +19,9 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::booking.booking"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }
