@@ -20,7 +20,8 @@
         "content.text-and-image-block",
         "content.image-grid",
         "content.newsletter",
-        "contact.contact-form"
+        "contact.contact-form",
+        "class.booking-form"
       ]
     },
     "title": {

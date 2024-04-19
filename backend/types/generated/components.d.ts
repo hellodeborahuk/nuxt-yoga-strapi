@@ -1,5 +1,31 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface ClassBookingForm extends Schema.Component {
+  collectionName: 'components_class_booking_forms';
+  info: {
+    displayName: 'bookingForm';
+  };
+  attributes: {
+    heading: Attribute.String;
+  };
+}
+
+export interface ClassBooking extends Schema.Component {
+  collectionName: 'components_class_bookings';
+  info: {
+    displayName: 'booking';
+    description: '';
+  };
+  attributes: {
+    availability: Attribute.Integer;
+    timeDate: Attribute.DateTime;
+    location: Attribute.Text;
+    buttonText: Attribute.String;
+    price: Attribute.String;
+    class: Attribute.Relation<'class.booking', 'oneToOne', 'api::class.class'>;
+  };
+}
+
 export interface ClassClass extends Schema.Component {
   collectionName: 'components_class_classes';
   info: {
@@ -101,6 +127,8 @@ export interface HeroHero extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'class.booking-form': ClassBookingForm;
+      'class.booking': ClassBooking;
       'class.class': ClassClass;
       'classes.classes': ClassesClasses;
       'contact.contact-form': ContactContactForm;

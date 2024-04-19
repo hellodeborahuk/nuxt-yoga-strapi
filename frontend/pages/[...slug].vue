@@ -22,5 +22,6 @@ const page = data.value?.pages.data[0] ?? {};
     <Newsletter v-if="segment.__typename === 'ComponentContentNewsletter'" :heading="segment.heading" :copy="segment.copy" :placeholderInput1="segment.placeholderInput1" :placeholderInput2="segment.placeholderInput2" :buttonText="segment.buttonText" />
     <ImageGrid v-if="segment.__typename === 'ComponentContentImageGrid'" :images="segment.images" />
     <ContactForm  v-if="segment.__typename === 'ComponentContactContactForm'" :attributes="segment" />
+    <BookingForm v-if="segment.__typename === 'ComponentClassBookingForm'" :heading="segment.heading" />
   </div>
 </template>

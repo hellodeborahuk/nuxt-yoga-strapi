@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_class_bookings",
+  "info": {
+    "displayName": "booking",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "availability": {
+      "type": "integer"
+    },
+    "timeDate": {
+      "type": "datetime"
+    },
+    "location": {
+      "type": "text"
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "class": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::class.class"
+    }
+  }
+}

@@ -77,6 +77,9 @@ query singleArticleQuery($id: ID!) {
                   }
                 }
               }
+              ...on ComponentClassBookingForm {
+                heading
+               }
               ...on ComponentContentTextAndImageBlock {
                 copy
                 image {
@@ -145,6 +148,33 @@ query singleArticleQuery($id: ID!) {
               attributes {
                 url
                 alternativeText
+              }
+            }
+          }
+        }
+      }
+    }
+  }`
+
+  export const bookingQuery = gql`
+  query bookingQuery {
+    booking(id:1) {
+      data {
+        attributes {
+          __typename
+          ...on Booking {
+            booking {
+              availability
+              timeDate
+              location
+              buttonText
+              price
+              class {
+                data {
+                  attributes {
+                    title
+                  }
+                }
               }
             }
           }

@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_class_booking_forms",
+  "info": {
+    "displayName": "bookingForm"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    }
+  }
+}
