@@ -5,6 +5,7 @@
   
   const navigation = [
     { name: 'Home', href: '/' },
+    { name: 'Classes', href: '/booking' },
     { name: 'Blog', href: '/posts' },
     { name: 'Contact', href: '/contact' },
   ]
@@ -20,8 +21,8 @@
                 <a v-for="item in navigation" :key="item.name" :href="item.href" class="block rounded-md px-3 py-2 text-base font-semibold leading-7 hover:text-teal-600">{{ item.name }}</a>  
             </div>
         </nav>
-        <div class="col-span-1 justify-self-end self-start">            
-            <a href="#" class="button-primary hidden lg:flex">Book your class</a>
+        <div class="col-span-1 justify-self-end self-start">
+            <NuxtLink to="/booking" class="button-primary hidden lg:flex">Book your class</NuxtLink>     
             <div class="flex items-start lg:hidden">
                 <button type="button" class=" rounded-md p-2.5" @click="mobileMenuOpen = true">
                     <span class="sr-only">Open main menu</span>
@@ -45,8 +46,8 @@
                 <div class="flex flex-col gap-4 mb-6">
                     <a v-for="item in navigation" :key="item.name" :href="item.href" class="block rounded-md px-3 py-2 text-base font-semibold leading-7 hover:bg-teal-50">{{ item.name }}</a>
                 </div>
-                <div class="">           
-                    <a href="#" class="button-primary">Book your class</a>
+                <div class="">      
+                    <NuxtLink to="/booking" class="button-primary">Book your class</NuxtLink>     
                 </div>
             </div>
             </DialogPanel>
